@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Justin Silguero — AI Profile</title>
+<style>
+  :root {
+    --bg: #0b0e14;
+    --card: rgba(255, 255, 255, 0.045);
+    --card-border: rgba(255, 255, 255, 0.09);
+    --text: #e8ecf4;
+    --muted: #9aa4b8;
+    --accent: #6ea8ff;
+    --accent2: #b07cff;
+    --glow: rgba(110, 168, 255, 0.25);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background:
+      radial-gradient(1200px 600px at 80% -10%, rgba(176,124,255,0.12), transparent 60%),
+      radial-gradient(1000px 500px at 10% 110%, rgba(110,168,255,0.10), transparent 60%),
+      var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 56px 20px 80px; }
+
+  /* Hero */
+  .hero { display: flex; gap: 28px; align-items: center; flex-wrap: wrap; margin-bottom: 44px; }
+  .avatar {
+    width: 128px; height: 128px; border-radius: 50%; flex-shrink: 0;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 44px; font-weight: 700; color: #fff;
+    box-shadow: 0 0 0 3px rgba(255,255,255,0.08), 0 8px 40px var(--glow);
+  }
+  .hero h1 { font-size: 2.2rem; letter-spacing: -0.02em; }
+  .hero .tagline { color: var(--muted); font-size: 1.05rem; margin-top: 4px; }
+  .badges { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
+  .badge {
+    font-size: 0.78rem; padding: 4px 12px; border-radius: 999px;
+    background: var(--card); border: 1px solid var(--card-border); color: var(--muted);
+  }
+
+  /* Sections */
+  section { margin-bottom: 48px; }
+  h2 {
+    font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.14em;
+    color: var(--accent); margin-bottom: 16px;
+  }
+
+  /* Account cards */
+  .accounts { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  a.account {
+    display: flex; align-items: center; gap: 14px; text-decoration: none;
+    background: var(--card); border: 1px solid var(--card-border);
+    border-radius: 16px; padding: 16px 18px; color: var(--text);
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  a.account:hover {
+    transform: translateY(-2px); border-color: rgba(110,168,255,0.45);
+    box-shadow: 0 6px 24px var(--glow);
+  }
+  .account svg { width: 28px; height: 28px; flex-shrink: 0; }
+  .account .name { font-weight: 600; }
+  .account .handle { font-size: 0.82rem; color: var(--muted); }
+
+  /* Accomplishment cards */
+  .items { display: flex; flex-direction: column; gap: 14px; }
+  .item {
+    background: var(--card); border: 1px solid var(--card-border);
+    border-left: 3px solid var(--accent);
+    border-radius: 14px; padding: 18px 20px;
+  }
+  .item h3 { font-size: 1.02rem; margin-bottom: 4px; }
+  .item .meta { font-size: 0.8rem; color: var(--accent2); margin-bottom: 8px; }
+  .item p { color: var(--muted); font-size: 0.94rem; }
+
+  /* Skills */
+  .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+  .skill {
+    padding: 7px 16px; border-radius: 999px; font-size: 0.86rem;
+    background: var(--card); border: 1px solid var(--card-border);
+  }
+
+  footer { color: var(--muted); font-size: 0.8rem; text-align: center; margin-top: 60px; }
+  footer a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ EDIT YOUR INFO IN THE SCRIPT BLOCK BELOW ============ -->
+  <script id="profile-data" type="application/json">
+  {
+    "name": "Justin Silguero",
+    "initials": "JS",
+    "tagline": "App Builder — Building From AI",
+    "badges": ["App Builder", "Building From AI", "Google AI Certified"],
+
+    "accounts": [
+      { "id": "google",   "label": "Google",   "handle": "justinsilguero@gmail.com",  "url": "https://mail.google.com" },
+      { "id": "apple",    "label": "Apple",    "handle": "jdog4413@yahoo.com",        "url": "https://account.apple.com" },
+      { "id": "linkedin", "label": "LinkedIn", "handle": "linkedin.com/in/justin-silguero-b45ab9219", "url": "https://linkedin.com/in/justin-silguero-b45ab9219" },
+      { "id": "github",   "label": "GitHub",   "handle": "@JSTNsane",           "url": "https://github.com/JSTNsane" }
+    ],
+
+    "accomplishments": [
+      {
+        "title": "Google Certified in AI",
+        "meta": "2026 · Google Certification",
+        "desc": "Certified in artificial intelligence through Google's official training program — covering AI fundamentals, machine learning concepts, and the practical application of Google's AI tools to real-world problems."
+      }
+    ],
+
+    "skills": ["Python"]
+  }
+  </script>
+  <!-- =================================================================== -->
+
+  <header class="hero">
+    <div class="avatar" id="avatar">JS</div>
+    <div>
+      <h1 id="name">Justin Silguero</h1>
+      <div class="tagline" id="tagline"></div>
+      <div class="badges" id="badges"></div>
+    </div>
+  </header>
+
+  <section>
+    <h2>Find Me Everywhere</h2>
+    <div class="accounts" id="accounts"></div>
+  </section>
+
+  <section>
+    <h2>AI Accomplishments</h2>
+    <div style="font-size:0.85rem;color:var(--muted);margin:-6px 0 14px;">Featured credential</div>
+    <div class="items" id="accomplishments"></div>
+  </section>
+
+  <section>
+    <h2>Skills & Tools</h2>
+    <div class="skills" id="skills"></div>
+  </section>
+
+  <footer>Built with <a href="https://github.com/JSTNsane">AI</a> · <span id="year"></span></footer>
+</div>
+
+<script>
+  const icons = {
+    google: '<svg viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15A11 11 0 0 0 2.18 7.06L5.84 9.9C6.71 7.31 9.14 5.38 12 5.38z"/></svg>',
+    apple: '<svg viewBox="0 0 24 24"><path fill="#e8ecf4" d="M17.05 12.54c-.03-2.89 2.36-4.27 2.47-4.34-1.35-1.97-3.44-2.24-4.18-2.27-1.78-.18-3.47 1.05-4.37 1.05-.9 0-2.29-1.02-3.76-1-1.93.03-3.71 1.12-4.7 2.85-2.01 3.49-.51 8.66 1.45 11.49.96 1.38 2.1 2.93 3.6 2.87 1.44-.06 1.99-.93 3.73-.93s2.24.93 3.76.9c1.56-.03 2.54-1.41 3.49-2.8 1.09-1.6 1.54-3.15 1.57-3.23-.03-.02-3.01-1.16-3.06-4.59zM14.16 4.06c.8-.97 1.34-2.32 1.19-3.66-1.15.05-2.55.77-3.38 1.73-.74.86-1.39 2.23-1.22 3.55 1.29.1 2.6-.65 3.41-1.62z"/></svg>',
+    linkedin: '<svg viewBox="0 0 24 24"><path fill="#0A66C2" d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>',
+    github: '<svg viewBox="0 0 24 24"><path fill="#e8ecf4" d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.5.1-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17 4.6 18 4.9 18 4.9c.6 1.7.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3z"/></svg>'
+  };
+
+  const data = JSON.parse(document.getElementById('profile-data').textContent);
+  document.title = data.name + " — AI Profile";
+  document.getElementById('name').textContent = data.name;
+  document.getElementById('avatar').textContent = data.initials;
+  document.getElementById('tagline').textContent = data.tagline;
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.getElementById('badges').innerHTML =
+    data.badges.map(b => `<span class="badge">${b}</span>`).join('');
+
+  document.getElementById('accounts').innerHTML =
+    data.accounts.map(a =>
+      `<a class="account" href="${a.url}" target="_blank" rel="noopener">
+         ${icons[a.id] || ''}
+         <div><div class="name">${a.label}</div><div class="handle">${a.handle}</div></div>
+       </a>`).join('');
+
+  document.getElementById('accomplishments').innerHTML =
+    data.accomplishments.map(i =>
+      `<div class="item"><h3>${i.title}</h3><div class="meta">${i.meta}</div><p>${i.desc}</p></div>`).join('');
+
+  document.getElementById('skills').innerHTML =
+    data.skills.map(s => `<span class="skill">${s}</span>`).join('');
+</script>
+</body>
+</html>
